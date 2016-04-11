@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>ApiControllerForwarder.HttpProxy</id>
-    <version>1.5</version>
+    <version>1.7</version>
     <title>ApiControllerForwarder.HttpProxy</title>
     <authors>Benjamin Adams</authors>
     <licenseUrl>https://github.com/BenjaminAdams/ApiControllerForwarder.HttpProxy</licenseUrl>
@@ -10,7 +10,7 @@
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>ApiController.HttpProxy Forward HTTP calls in c# ApiControllers</description>
-    <releaseNotes>-</releaseNotes>
+    <releaseNotes>Please see GitHub for documentation: https://github.com/BenjaminAdams/ApiControllerForwarder.HttpProxy </releaseNotes>
     <summary>-</summary>
     <copyright>Copyright 2016</copyright>
     <tags>Help WebApi AspNet SelfHost ApiController</tags>
