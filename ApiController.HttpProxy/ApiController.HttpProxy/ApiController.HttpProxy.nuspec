@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>ApiController.HttpProxy</id>
+    <version>1.0</version>
+    <title>ApiController.HttpProxy Forward HTTP calls in c# ApiControllers</title>
+    <authors>Benjamin Adams</authors>
+    <licenseUrl>https://github.com/BenjaminAdams/ApiController.HttpProxy</licenseUrl>
+    <projectUrl>https://github.com/BenjaminAdams/ApiController.HttpProxy</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ApiController.HttpProxy Forward HTTP calls in c# ApiControllers</description>
+    <releaseNotes>-</releaseNotes>
+    <summary>-</summary>
+    <copyright>Copyright 2016</copyright>
+    <tags>Help WebApi AspNet SelfHost ApiController</tags>
+    <dependencies>
+      <dependency id="System.Web.Http" version="4.0.0.0" />
+    </dependencies>
+  </metadata>
+</package>
