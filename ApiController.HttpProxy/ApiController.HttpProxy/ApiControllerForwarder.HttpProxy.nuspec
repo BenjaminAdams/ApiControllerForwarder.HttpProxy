@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>ApiControllerForwarder.HttpProxy</id>
-    <version>1.3</version>
+    <version>1.4</version>
     <title>ApiControllerForwarder.HttpProxy</title>
     <authors>Benjamin Adams</authors>
     <licenseUrl>https://github.com/BenjaminAdams/ApiControllerForwarder.HttpProxy</licenseUrl>

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Routing;
+﻿using System.Web.Http;
 
-namespace ApiController.HttpProxy.TestController
+namespace ApiControllerForwarder.HttpProxy.TestController
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

@@ -14,6 +14,13 @@ namespace ApiControllerForwarder.HttpProxy.TestController.Controllers
             return await HttpProxy.ProxyAsync(this.Request, "https://www.reddit.com/r/JUSTINBIEBER.json");
         }
 
+        [HttpGet]
+        [Route("GetSyncTest")]
+        public HttpResponseMessage GetSyncTest(dynamic input)
+        {
+            return HttpProxy.Proxy(this.Request, "https://www.reddit.com/r/JUSTINBIEBER.json");
+        }
+
         [HttpPost]
         [Route("PostTest")]
         public async Task<HttpResponseMessage> PostTest(dynamic input)

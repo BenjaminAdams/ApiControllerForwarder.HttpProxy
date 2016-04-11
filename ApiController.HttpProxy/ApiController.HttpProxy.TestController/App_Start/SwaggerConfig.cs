@@ -1,11 +1,11 @@
+using ApiControllerForwarder.HttpProxy.TestController;
+using Swashbuckle.Application;
 using System.Web.Http;
 using WebActivatorEx;
-using ApiController.HttpProxy.TestController;
-using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace ApiController.HttpProxy.TestController
+namespace ApiControllerForwarder.HttpProxy.TestController
 {
     public class SwaggerConfig
     {
@@ -13,7 +13,7 @@ namespace ApiController.HttpProxy.TestController
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
 
-            GlobalConfiguration.Configuration 
+            GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {
                         // By default, the service root url is inferred from the request used to access the docs.
@@ -117,7 +117,7 @@ namespace ApiController.HttpProxy.TestController
                         //c.SchemaFilter<ApplySchemaVendorExtensions>();
 
                         // Set this flag to omit schema property descriptions for any type properties decorated with the
-                        // Obsolete attribute 
+                        // Obsolete attribute
                         //c.IgnoreObsoleteProperties();
 
                         // In a Swagger 2.0 document, complex types are typically declared globally and referenced by unique
@@ -132,7 +132,7 @@ namespace ApiController.HttpProxy.TestController
                         // You can change the serializer behavior by configuring the StringToEnumConverter globally or for a given
                         // enum type. Swashbuckle will honor this change out-of-the-box. However, if you use a different
                         // approach to serialize enums as strings, you can also force Swashbuckle to describe them as strings.
-                        // 
+                        //
                         //c.DescribeAllEnumsAsStrings();
 
                         // Similar to Schema filters, Swashbuckle also supports Operation and Document filters:
@@ -158,7 +158,7 @@ namespace ApiController.HttpProxy.TestController
                         // In contrast to WebApi, Swagger 2.0 does not include the query string component when mapping a URL
                         // to an action. As a result, Swashbuckle will raise an exception if it encounters multiple actions
                         // with the same path (sans query string) and HTTP method. You can workaround this by providing a
-                        // custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs 
+                        // custom strategy to pick a winner or merge the descriptions for the purposes of the Swagger docs
                         //
                         //c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 
@@ -169,12 +169,11 @@ namespace ApiController.HttpProxy.TestController
                     })
                 .EnableSwaggerUi(c =>
                     {
-						//If you want to load the swagger documentation from a different URL
-						//c.CustomSwagDocLocation(customSwagUrl);
+                        //If you want to load the swagger documentation from a different URL
+                        //c.CustomSwagDocLocation(customSwagUrl);
 
-						//add a custom logo
-						//c.CustomLogo("http://example.com/logo.png");
-
+                        //add a custom logo
+                        //c.CustomLogo("http://example.com/logo.png");
 
                         // Use the "InjectStylesheet" option to enrich the UI with one or more additional CSS stylesheets.
                         // The file must be included in your project as an "Embedded Resource", and then the resource's

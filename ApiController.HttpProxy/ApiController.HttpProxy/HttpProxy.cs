@@ -51,7 +51,9 @@ namespace ApiControllerForwarder.HttpProxy
 
         public static HttpResponseMessage Proxy(HttpRequestMessage req, string url)
         {
-            return ProxyAsync(req, url).Result;
+            var task = Task.Run(async () => await ProxyAsync(req, url));
+            task.Wait();
+            return task.Result;
         }
     }
 }
