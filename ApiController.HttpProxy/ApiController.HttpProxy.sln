@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiController.HttpProxy", "ApiController.HttpProxy\ApiController.HttpProxy.csproj", "{CE1BA243-FD9D-4B05-88A9-557FD1C677E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiControllerForwarder.HttpProxy", "ApiController.HttpProxy\ApiControllerForwarder.HttpProxy.csproj", "{CE1BA243-FD9D-4B05-88A9-557FD1C677E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiController.HttpProxy.TestController", "ApiController.HttpProxy.TestController\ApiController.HttpProxy.TestController.csproj", "{73942F8D-3C5C-40F1-890A-9A30BE6B9C5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiControllerForwarder.HttpProxy.TestController", "ApiController.HttpProxy.TestController\ApiControllerForwarder.HttpProxy.TestController.csproj", "{73942F8D-3C5C-40F1-890A-9A30BE6B9C5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

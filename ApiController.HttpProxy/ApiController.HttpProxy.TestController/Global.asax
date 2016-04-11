@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ApiController.HttpProxy.TestController.WebApiApplication" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="ApiControllerForwarder.HttpProxy.TestController.WebApiApplication" Language="C#" %>

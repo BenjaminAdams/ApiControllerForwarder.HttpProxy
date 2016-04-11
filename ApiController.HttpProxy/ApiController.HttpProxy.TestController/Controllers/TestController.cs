@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace ApiController.HttpProxy.TestController.Controllers
+namespace ApiControllerForwarder.HttpProxy.TestController.Controllers
 {
     [RoutePrefix("testController")]
     public class TestController : System.Web.Http.ApiController

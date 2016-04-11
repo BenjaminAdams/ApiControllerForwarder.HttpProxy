@@ -7,7 +7,7 @@ using System.Net.Mime;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ApiController.HttpProxy
+namespace ApiControllerForwarder.HttpProxy
 {
     public static class HttpProxy
     {
