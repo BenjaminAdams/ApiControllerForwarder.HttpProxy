@@ -28,6 +28,13 @@ namespace ApiControllerForwarder.HttpProxy
             }
         }
 
+        public static HttpResponseMessage Proxy(HttpRequestMessage req, string url)
+        {
+            var task = Task.Run(async () => await ProxyAsync(req, url));
+            task.Wait();
+            return task.Result;
+        }
+
         private static async Task GetHttpBody(HttpRequestMessage req)
         {
             var stream = await req.Content.ReadAsStreamAsync();
@@ -45,13 +52,6 @@ namespace ApiControllerForwarder.HttpProxy
             if (headers == null || !headers.Any()) return defaultContentType;
 
             return headers.ContentType;
-        }
-
-        public static HttpResponseMessage Proxy(HttpRequestMessage req, string url)
-        {
-            var task = Task.Run(async () => await ProxyAsync(req, url));
-            task.Wait();
-            return task.Result;
         }
     }
 }
