@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE1BA243-FD9D-4B05-88A9-557FD1C677E4}</ProjectGuid>
+    <ProjectGuid>{6597DDB2-6A1C-459B-AEE3-AD9A21FA77C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApiControllerForwarder.HttpProxy</RootNamespace>
-    <AssemblyName>ApiControllerForwarder.HttpProxy</AssemblyName>
+    <RootNamespace>ApiControllerForwarder.HttpProxy.UnitTests</RootNamespace>
+    <AssemblyName>ApiControllerForwarder.HttpProxy.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -37,7 +38,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,11 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HttpProxy.cs" />
+    <Compile Include="HttpProxyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ApiControllerForwarder.HttpProxy.nuspec" />
+    <ProjectReference Include="..\ApiController.HttpProxy.TestController\ApiControllerForwarder.HttpProxy.TestController.csproj">
+      <Project>{73942F8D-3C5C-40F1-890A-9A30BE6B9C5A}</Project>
+      <Name>ApiControllerForwarder.HttpProxy.TestController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ApiController.HttpProxy\ApiControllerForwarder.HttpProxy.csproj">
+      <Project>{ce1ba243-fd9d-4b05-88a9-557fd1c677e4}</Project>
+      <Name>ApiControllerForwarder.HttpProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

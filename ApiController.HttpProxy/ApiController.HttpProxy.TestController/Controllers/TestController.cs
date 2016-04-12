@@ -27,5 +27,40 @@ namespace ApiControllerForwarder.HttpProxy.TestController.Controllers
         {
             return await HttpProxy.ProxyAsync(this.Request, "http://localhost/test");
         }
+
+        [HttpGet]
+        [Route("GetTestWithQryParam")]
+        public string GetTestWithQryParam(string someParam)
+        {
+            return "you just sent " + someParam;
+        }
+
+        [HttpGet]
+        [Route("GetTest2")]
+        public string GetTest2()
+        {
+            return "success!";
+        }
+
+        [HttpGet]
+        [Route("PostTest2")]
+        public SomeComplicatedObj PostTest2(SomeComplicatedObj input)
+        {
+            input.Age += 5;
+            return input;
+        }
+
+        [HttpGet]
+        [Route("PostTestWithQryParam")]
+        public string PostTestWithQryParam([FromUri]string someParam44)
+        {
+            return "you just sent " + someParam44;
+        }
+    }
+
+    public class SomeComplicatedObj
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
     }
 }
